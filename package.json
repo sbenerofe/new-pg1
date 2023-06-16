@@ -1,0 +1,48 @@
+{
+  "name": "new-pg1",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app.js",
+    "start1": "node app.js",
+    "dev": "nodemon -r dotenv/config app.js",
+    "devseed": "nodemon -r dotenv/config app.js && sequelize db:seed:all",
+    "pm2": "pm2 start app.js",
+    "test": "mocha",
+    "test-dev": "APP_ENV=test mocha",
+    "start-local": "APP_ENV=local nodemon -r dotenv/config app.js",
+    "seed": "npx sequelize-cli db:seed:all",
+    "seed:undo": "npx sequelize-cli db:seed:undo:all"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "debug": "~4.3.4",
+    "dotenv": "^16.0.3",
+    "express": "^5.0.0-beta.1",
+    "express-validator": "^6.15.0",
+    "http-errors": "~2.0.0",
+    "ioredis": "^5.3.1",
+    "is-valid-uuid-v4": "^1.2.3",
+    "jsonwebtoken": "^9.0.0",
+    "morgan": "~1.10.0",
+    "node-redis": "^0.1.7",
+    "nodemon": "^2.0.22",
+    "pg": "^8.10.0",
+    "pg-hstore": "^2.3.4",
+    "redis": "^4.6.5",
+    "sequelize": "^6.31.0",
+    "sequelize-hierarchy-ts": "^3.0.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
+    "eslint": "^8.38.0",
+    "mocha": "^10.2.0",
+    "sequelize-cli": "^6.6.0",
+    "supertest": "^6.3.3"
+  }
+}
